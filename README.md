@@ -1,12 +1,12 @@
 # tinygo-iskrajs-poc
 
-Скопировать в установленный каталог с дистрибутивом tinygo.
-На ubuntu 20.04 и утановленным пакетом tinygo-0.24.0 скопировать в /usr/local/lib/tinygo
+Скопировать файлы из каталогов tinygo/src и tinygo/targets в одноимённые каталоги с установленным дистрибом tinygo 0.24.0.
+На ubuntu 20.04 и установленным пакетом tinygo-0.24.0 скопировать в /usr/local/lib/tinygo
 ```
 https://github.com/tinygo-org/tinygo/releases/download/v0.24.0/tinygo_0.24.0_amd64.deb
 ```
 
-дальше использовать
+дальше скомпилить пример из каталога examples, предварительно в него перейдя, и прошить бинарник в контроллер
 
 ```
 tinygo build -o blinky3.bin -target iskrajs ./blinky3.go
