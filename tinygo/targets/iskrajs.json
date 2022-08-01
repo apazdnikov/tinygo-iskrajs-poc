@@ -5,7 +5,11 @@
   "extra-files": [
     "src/device/stm32/stm32f405.s"
   ],
-    "flash-method": "msd",
+    "flash-method": "openocd",
+    "openocd-interface": "stlink-v2",
+    "openocd-target": "stm32f4x",
+
     "msd-volume-name": "IskraJSBOOT",
-    "msd-firmware-name": "firmware.uf2"
+    "msd-firmware-name": "firmware.uf2",
+    "gdb": ["arm-none-eabi-gdb"]
 }

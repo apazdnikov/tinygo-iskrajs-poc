@@ -5,7 +5,7 @@ package machine
 
 import (
 	"device/stm32"
-	"runtime/interrupt"
+//	"runtime/interrupt"
 )
 
 const (
@@ -25,7 +25,7 @@ const (
 const (
 	UART_TX_PIN = PB10
 	UART_RX_PIN = PB11
-        NUM_UART_INTERFACES = 1
+        NUM_UART_INTERFACES = 0
 )
 
 var (
@@ -43,7 +43,7 @@ var (
 
 // set up RX IRQ handler. Follow similar pattern for other UARTx instances
 func init() {
-	UART3.Interrupt = interrupt.New(stm32.IRQ_USART3, _UART3.handleInterrupt)
+//	UART3.Interrupt = interrupt.New(stm32.IRQ_USART3, _UART3.handleInterrupt)
 	stm32.RCC.APB1ENR.SetBits(stm32.RCC_APB1ENR_WWDGEN)
 }
 
